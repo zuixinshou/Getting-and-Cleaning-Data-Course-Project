@@ -30,8 +30,10 @@ run_analysis<-function (){
   colnames(testdata)<-gsub("\\-","\\.",colnames(testdata))
   colnames(test_subject_data)<-c("subject_id")
   colnames(test_activity_data)<-c("activity_id")
-  test_activity_data<-merge(activity_names,test_activity_data,
-                            by.x="V1",by.y="activity_id")
+  ##test_activity_data<-merge(test_activity_data,activity_names,
+  ##                          by.x="activity_id",by.y="V1")
+  test_activity_data<-data.frame(activity_id=test_activity_data$activity_id,
+                    activity_name=activity_names$V2[V1=test_activity_data$activity_id])
   colnames(test_activity_data)<-c("activity_id","activity_name")
   ## bind cols
   testdata<-cbind(test_activity_data$activity_name,testdata)
@@ -54,8 +56,10 @@ run_analysis<-function (){
   colnames(traindata)<-gsub("\\-","\\.",colnames(traindata))
   colnames(train_subject_data)<-c("subject_id")
   colnames(train_activity_data)<-c("activity_id")
-  train_activity_data<-merge(activity_names,train_activity_data,
-                             by.x="V1",by.y="activity_id")
+  ##train_activity_data<-merge(activity_names,train_activity_data,
+  ##                           by.x="V1",by.y="activity_id")
+  train_activity_data<-data.frame(activity_id=train_activity_data$activity_id,
+                activity_name=activity_names$V2[V1=train_activity_data$activity_id])
   colnames(train_activity_data)<-c("activity_id","activity_name")
   ## bind cols
   traindata<-cbind(train_activity_data$activity_name,traindata)
