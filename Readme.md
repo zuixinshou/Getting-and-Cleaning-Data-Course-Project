@@ -1,7 +1,4 @@
----
-title: "Readme"
-output: html_document
----
+# Readme
 
 ## How the script work
 ### The run_analysis function take 6 steps to collect and clean the data.
@@ -13,7 +10,6 @@ output: html_document
 ### 6.Write tidydata into "tidydata.txt" with "write.table" function.
 
 ##Variables desicription
-
 ###subject_id: the subject who performed the activity for each window sample. Its range is from 1 to 30.    
 ###activity_name: six activity names.(WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) 
 ###tBodyAcc.mean.X: The mean value of body acceleration in the X directions. The unit is standard gravity units 'g'.

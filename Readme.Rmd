@@ -1,11 +1,5 @@
----
-title: "Readme"
-output: html_document
----
+# Readme
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 ## How the script work
 ### The run_analysis function take 6 steps to collect and clean the data.
 ### 1.Use "dir.create" function to prepare the work dir.
